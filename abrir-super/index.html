@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Super — Abrir la app</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><div class="in">
+  <a class="brand" href="../">Super</a>
+</div></header>
+
+<main>
+  <h1>Abriendo Super…</h1>
+  <p>Si la app no se abre, descárgala aquí:</p>
+  <p><a id="store" href="https://apps.apple.com/app/id6779308914">Descargar Super</a></p>
+</main>
+
+<footer><div class="in">
+  Super is made by Zintex OÜ, Estonia. <a href="mailto:hola@supercomidas.app">hola@supercomidas.app</a>
+</div></footer>
+<script>
+  var android = /android/i.test(navigator.userAgent);
+  var store = android
+    ? 'https://play.google.com/store/apps/details?id=com.supercomidas.app'
+    : 'https://apps.apple.com/app/id6779308914';
+  document.getElementById('store').href = store;
+  window.location.href = 'super://';
+  setTimeout(function () { if (!document.hidden) window.location.href = store; }, 1500);
+</script>
+</body>
+</html>

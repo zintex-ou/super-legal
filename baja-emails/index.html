@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Super — Emails</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><div class="in">
+  <a class="brand" href="../">Super</a>
+</div></header>
+
+<main>
+  <div id="ok">
+    <h1>Baja confirmada</h1>
+    <p>Ya no recibirás más emails de Super. Puedes seguir usando la app con normalidad.</p>
+  </div>
+  <div id="error" hidden>
+    <h1>No hemos podido darte de baja</h1>
+    <p>El enlace no es válido o ha caducado. Escríbenos a <a href="mailto:hola@supercomidas.app">hola@supercomidas.app</a> y te damos de baja a mano.</p>
+  </div>
+</main>
+
+<footer><div class="in">
+  Super is made by Zintex OÜ, Estonia. <a href="mailto:hola@supercomidas.app">hola@supercomidas.app</a>
+</div></footer>
+<script>
+  if (new URLSearchParams(location.search).has('error')) {
+    document.getElementById('ok').hidden = true;
+    document.getElementById('error').hidden = false;
+  }
+</script>
+</body>
+</html>
